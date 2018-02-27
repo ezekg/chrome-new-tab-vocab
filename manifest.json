@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "New Tab Vocab",
+  "description": "Learn a new definition to increase your vocabulary every time you open a new tab.",
+  "version": "0.1.0",
+  "homepage_url": "https://github.com/ezekg/chrome-new-tab-vocab",
+  "icons": {
+    "120": "icon-120.png",
+    "64": "icon-64.png",
+    "32": "icon-32.png"
+  },
+  "permissions" : [
+    "management"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
