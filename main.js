@@ -23,6 +23,9 @@ async function main() {
   // Some words contain newlines for some reason
   word = word.trim()
 
+  // Remove whitespace and empasize current word
+  passage = passage.trim().replace(new RegExp(`(${word}[a-z]*)`, 'gi'), '<em>$1</em>')
+
   document.body.innerHTML = `
     <div class='vocab'>
       <h1 class='vocab__word'>
@@ -30,7 +33,7 @@ async function main() {
       </h1>
       <hr class='vocab__hr'>
       <blockquote class='vocab__passage'>
-        &ldquo;${passage.replace(new RegExp(`(${word}[a-z]*)`, 'gi'), '<em>$1</em>')}&rdquo;
+        &ldquo;${passage}&rdquo;
       </blockquote>
       <p class='vocab__definition'>
         ${pronunciation} [${partOfSpeech}] &ndash; ${definition}
